@@ -1,0 +1,78 @@
+.founder-page1 {
+    font-family: Arial, sans-serif;
+}
+
+.btndesc {
+    border-radius: 10%;
+}
+
+.founder-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.founder-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.founder-info {
+    display: flex;
+    align-items: center;
+}
+
+.founder-photo img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.founder-details h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.founder-details p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.second-section {
+    width: 30%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.division {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 10px;
+}
+
+.division h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.xyz {
+    width: 200px;
+    height: 200px;
+    margin-right: 200px;
+}
+
+.search-form {
+    margin-left: 200px;
+}
