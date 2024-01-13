@@ -16,31 +16,61 @@ const Login = () => {
         }
     }, [navigate]);
 
-    const handleLogin = async (e) => {
-        e.preventDefault(); // Prevent default form submission behavior
+    // const handleLogin = async (e) => {
+    //     e.preventDefault(); // Prevent default form submission behavior
 
+    //     try {
+    //         const response = await axios.post(loginAPI, { email, password });
+
+    //         // Assuming the response contains the user data g
+    //         const user = response.data;
+    //         // console.log(user.user.email);
+
+    //         if (user.user.email) {
+    //             localStorage.setItem('user', JSON.stringify(user));
+    //             if (user.user.role === 'founder') {
+    //                 navigate('/founder');
+    //             } else {
+    //                 navigate('/');
+    //             }
+    //         } else {
+    //             alert('Please enter the correct details');
+    //         }
+    //     } catch (error) {
+    //         console.error('Error during login:', error);
+    //         alert('An error occurred during login. Please try again.');
+    //     }
+    // };
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+    
         try {
             const response = await axios.post(loginAPI, { email, password });
-
-            // Assuming the response contains the user data g
+    
             const user = response.data;
-            // console.log(user.user.email);
-
+    
+            console.log("User object:", user); // Add this line to check the structure of the user object
+    
             if (user.user.email) {
                 localStorage.setItem('user', JSON.stringify(user));
-                if (user.role === 'founder') {
-                    navigate('/founder');
+            
+                // Assuming the role is nested under user.user.role
+                if (user.user.role === 1) {
+                    navigate('/admin/police');
                 } else {
-                    navigate('/');
+                    navigate('/user/people');
                 }
             } else {
                 alert('Please enter the correct details');
             }
+            
         } catch (error) {
             console.error('Error during login:', error);
             alert('An error occurred during login. Please try again.');
         }
     };
+    
 
     return (
         <div className='wrapper'>

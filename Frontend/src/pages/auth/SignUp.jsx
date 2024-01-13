@@ -25,7 +25,7 @@ const SignUp = () => {
         console.log(result);
         localStorage.setItem("user",JSON.stringify(result));
 
-        navigate('/');  
+        navigate('/user/people');  
     }
     return (
         <div className="wrapper">
