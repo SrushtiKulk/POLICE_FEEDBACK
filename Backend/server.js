@@ -19,7 +19,7 @@ app.use(cors());
 // Route
 // app.use('/auth', authRoutes);
 app.use("/auth", authRoutes);
-app.use("/feedback", feedbackRoutes);
+app.use("/answers", feedbackRoutes);
 
 
 //test route

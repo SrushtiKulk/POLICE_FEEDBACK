@@ -97,12 +97,15 @@ import React, { useState } from "react";
 import { QuizData } from "./feedbackdata";
 import "./feedback.css";
 import { feedbackAPI } from 'pages/APIRoutes';
+import { useNavigate } from "react-router-dom";
 
 function FeedBack() {
     const [buttonColor, setButtonColor] = useState("#00bf63");
     const [selectedOptions, setSelectedOptions] = useState(
         Array(QuizData.length).fill("") // Initialize with empty strings
     );
+
+    const navigate = useNavigate();
 
     const handleOptionClick = (questionIndex, optionIndex) => {
         console.log("Option clicked:", questionIndex, optionIndex);
@@ -135,7 +138,7 @@ function FeedBack() {
             //     }),
             // });
 
-            const response = await fetch("http://localhost:8080/feedback", {
+            const response = await fetch("http://localhost:8080/answers/feedback", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -148,9 +151,11 @@ function FeedBack() {
                 }),
             });
 
-
+            console.log("Frontend", response);
             if (response.ok) {
-                console.log("Answers submitted successfully");
+                // console.log("Answers submitted successfully");
+                alert("Answers submitted successfully");
+                navigate('/');
             } else {
                 console.error("Failed to submit answers");
             }

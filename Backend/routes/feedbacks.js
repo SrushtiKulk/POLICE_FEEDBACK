@@ -4,6 +4,7 @@ const router = express.Router();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const { storeFeedbackController } = require("../controllers/feedbackControllers");
 
 // mongoose.connect("mongodb://localhost:27017/feedbacks", {
 //   useNewUrlParser: true,
@@ -20,19 +21,7 @@ const Answer = mongoose.model("Answer", answerSchema);
 router.use(bodyParser.json());
 router.use(cors());
 
-router.post("/feedback", async (req, res) => {
-  try {
-    const { answers } = req.body;
-
-    // Use the create method to insert many documents
-    await Answer.create(answers);
-
-    res.status(200).json({ message: "Answers stored successfully." });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
+router.post("/feedback", storeFeedbackController);
 
 module.exports = router;
 
