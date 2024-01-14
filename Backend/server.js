@@ -3,6 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoDB = require('./config/db');
 const authRoutes = require('./routes/users')
+const feedbackRoutes = require('./routes/feedbacks');
 
 //config dotenv
 dotenv.config();
@@ -18,6 +19,7 @@ app.use(cors());
 // Route
 // app.use('/auth', authRoutes);
 app.use("/auth", authRoutes);
+app.use("/feedback", feedbackRoutes);
 
 
 //test route

@@ -61,7 +61,7 @@ body {
   .section2_container {
     width: auto;
   }
-  .container {
+  /* .container {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -70,13 +70,13 @@ body {
     background-color: rgb(90, 201, 155);
     border-radius: 15px;
     /* box-shadow: 2px 2px 10px 1px rgb(102, 3, 102); */
-    box-shadow: 2px 2px 10px 1px #333;
+    /* box-shadow: 2px 2px 10px 1px #333;
     overflow: hidden;
     padding: 10px;
     position: relative;
   
     justify-content: center;
-  }
+  } */ 
   .heading-txt {
     color: white;
     /* color:#276272; */

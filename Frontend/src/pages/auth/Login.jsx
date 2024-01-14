@@ -66,7 +66,9 @@ const Login = () => {
             }
             
         } catch (error) {
+            navigate('/signup');
             console.error('Error during login:', error);
+            
             alert('An error occurred during login. Please try again.');
         }
     };
