@@ -10,8 +10,6 @@ const PeoplePage = () => {
     <div className="founder-page1">
       {<Navbarv />}
 
-      
-
       {<Footer />}
     </div>
   );

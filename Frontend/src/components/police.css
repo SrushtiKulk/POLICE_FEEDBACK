@@ -3,3 +3,14 @@
     margin-right: 6.4%;
     padding-top: 5%;
 }
+
+
+@media(max-width: 770px) {
+    p {
+        font-size: 13px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+}

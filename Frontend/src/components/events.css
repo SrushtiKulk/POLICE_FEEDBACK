@@ -24,8 +24,29 @@
     /* Customize the text font size */
 }
 
-.img{
+.img {
     height: 300px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 770px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}
+
+.policecontent {
+    justify-content: center;
+
 }
 
 /* Customize further as needed */

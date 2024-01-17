@@ -104,6 +104,8 @@ function FeedBack() {
     const [selectedOptions, setSelectedOptions] = useState(
         Array(QuizData.length).fill("") // Initialize with empty strings
     );
+    const [location, setLocation] = useState(""); // New state for location
+
 
     const navigate = useNavigate();
 
@@ -119,7 +121,7 @@ function FeedBack() {
 
     const submitAnswers = async () => {
         // Check if any question is unanswered
-        if (selectedOptions.includes("")) {
+        if (selectedOptions.includes("") || location) {
             alert("Please answer all questions before submitting.");
             return;
         }
@@ -148,6 +150,7 @@ function FeedBack() {
                         questionIndex,
                         selectedOption,
                     })),
+                    location, // Include the selected location
                 }),
             });
 
@@ -168,7 +171,7 @@ function FeedBack() {
 
     return (
         <div>
-            <p className="heading-text">FEEDBACK FORM</p>
+            <p className="heading-text" id="wfeedback">FEEDBACK FORM</p>
 
             {QuizData.map((question, questionIndex) => (
                 <div key={questionIndex} className="container">
@@ -196,9 +199,9 @@ function FeedBack() {
                 className={`submit-btn ${isButtonClicked ? "clicked" : ""}`}
                 onClick={submitAnswers}
             >
-                <h3 style={{ margin: "0", color: "#fff" }}>
+                <h6 style={{ margin: "0", color: "#fff" }}>
                     {isButtonClicked ? "Answers Submitted" : "Submit Answers"}
-                </h3>
+                </h6>
             </button>
 
             {isButtonClicked && (

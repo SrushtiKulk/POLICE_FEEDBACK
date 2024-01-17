@@ -1,0 +1,161 @@
+.policeStationsSection{
+    padding-top: 90px;
+}
+
+.regcontainer{
+    align-items: center;
+    justify-content: center;
+    margin-left: 3.5%;
+    padding-left: 3.5%;
+}
+
+.stcontainer{
+    align-items: center;
+    justify-content: center;
+    margin-left: 3.5%;
+    padding-left: 3.5%;
+}
+
+.row{
+    margin-top: 5%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.column{
+    flex-basis: 31%;
+    border-radius: 10px;
+    background: rgb(92, 163, 243);
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    max-width: 350px;
+}
+
+/* Custom styles for the NavDropdown title */
+.elemts > .nav-link {
+    color: #fff; 
+  }
+  
+  /* Optional: Hover effect on the title */
+  .elemts > .nav-link:hover {
+    color: #ccc; /* Set the hover color as needed */
+  }
+
+h6{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.elemts{
+    color: white;
+}
+.elemts:hover {
+    color: #ccc; /* Set the hover color as needed */
+  }
+
+.column:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+
+.col:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+
+.row-st{
+    margin-top: 5%;
+}
+
+.Intro{
+    background-color: #EEF5FF;
+}
+
+.col-st{
+    flex-basis: 31%;
+    border-radius: 10px;
+    background: rgb(92, 163, 243);
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.dropdown_menu{
+    display: block;
+    /* position: absolute; */
+    top: 100%;
+}
+
+/* Basic styling for the menu button */
+.icon-menu{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #212486;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .icon-menu:hover {
+    background-color: #17184c;
+  }
+  
+
+.fdbckmenu{
+    display: none;
+    position:relative;
+    background-color: #f1f1f1;
+    min-width: 360px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+@media(max-width: 770px){
+    .row{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .row-st{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.cont{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navbar{
+    color: white;
+}
+.Intro{
+    padding-left: 85px;
+    justify-content: center;
+}
+
+#basic-nav-dropdown{
+    margin-top: 13.5%;
+    font-weight: 600;
+}
+
+.nav-public{
+    padding-right: 20px;
+}
+
+/* Add custom styles to the NavDropdown title */
+#basic-nav-dropdown .nav-link {
+    /* Your custom styles here */
+    color: #333; /* Change the color as needed */
+    font-weight: 500;
+    /* Add any other styles you want */
+  }
+  
+  /* Optional: Hover effect on the title */
+  #basic-nav-dropdown .nav-link:hover {
+    color: #555; /* Change the hover color as needed */
+  }
+  

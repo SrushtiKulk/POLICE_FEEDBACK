@@ -11,7 +11,7 @@ const isValidAnswer = (answer) => {
 
 const storeFeedbackController = async (req, res) => {
     try {
-        const { answers } = req.body;
+        const { answers, location } = req.body;
         console.log(answers);
 
         // Validate the format of the answers array
@@ -20,7 +20,7 @@ const storeFeedbackController = async (req, res) => {
         }
 
         // Store feedback answers in the database using insertMany
-        const ans = await Feedback.insertMany(answers);
+        const ans = await Feedback.insertMany(answers, location);
 
         res.status(200).json({ message: 'Feedback answers stored successfully.' , ans});
     } catch (error) {

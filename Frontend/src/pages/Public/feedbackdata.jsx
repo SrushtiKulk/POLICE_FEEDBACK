@@ -26,7 +26,7 @@ export const QuizData = [
     },
     {
       question:
-        "How would you characterize the level of discipline associated with the Indian police?",
+        "How would you rate the response time of the Indian police?",
       options: ["Very Low", "Low", "Moderate", "High"],
     },
     {
@@ -84,4 +84,8 @@ export const QuizData = [
         "Highly Effectively",
       ],
     },
+    {
+      question: "Select your location",
+      options: ["Option 1", "Option 2", "Option 3", "Option 4"],
+  },
   ];

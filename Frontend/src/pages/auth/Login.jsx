@@ -90,7 +90,7 @@ const Login = () => {
                 <div className='input-box'>
                     <input
                         type='password'
-                        placeholder='Password'
+                        placeholder='FIR-ID'
                         required
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}

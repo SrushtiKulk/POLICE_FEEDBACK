@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const mongoDB = require('./config/db');
 const authRoutes = require('./routes/users')
 const feedbackRoutes = require('./routes/feedbacks');
-
+const opinionRoutes = require('./routes/opinions');
 //config dotenv
 dotenv.config();
 
@@ -20,6 +20,7 @@ app.use(cors());
 // app.use('/auth', authRoutes);
 app.use("/auth", authRoutes);
 app.use("/answers", feedbackRoutes);
+app.use("/opinions", opinionRoutes);
 
 
 //test route

@@ -1,12 +1,11 @@
 .search-form {
-    display: flex;
-    margin-left: 450px;
-    margin-top: 0.5%;
-    height: 40px;
-  
-  }
-  
-  .container {
-    margin-left: 9.3%;
-  }
-  
+  display: flex;
+  margin-left: 450px;
+  margin-top: 0.5%;
+  height: 40px;
+
+}
+
+.container {
+  margin-left: 9.3%;
+}

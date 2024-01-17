@@ -10,6 +10,10 @@ import SignUp from "pages/auth/SignUp";
 import AdminRoute from "components/RoleRoutes/AdminAuth";
 import NormalUserRoute from "components/RoleRoutes/UserAuth";
 import PeoplePage from "pages/Public/PeoplePage";
+import WomenPage from "pages/Public/WomenPage";
+import OpinionPage from "pages/Public/Opinion";
+
+
 import FeedBack from "pages/Public/FeedBack";
 import Station0Page from "pages/Police/Station0";
 import Station1Page from "pages/Police/Station1";
@@ -36,6 +40,10 @@ const ProjectRoutes = () => {
         <Route path="/user/*" element={<NormalUserRoute />}>
           <Route path="people" element={<PeoplePage />} />
           <Route path="feedback" element={<FeedBack />} />
+          <Route path="opinion" element={<OpinionPage />} />
+          <Route path="women" element={<WomenPage />} />
+         
+          
           
         </Route>
 
