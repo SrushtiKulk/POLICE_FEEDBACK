@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './opinion.css'
 
 const OpinionForm = () => {
   const [wantToAddOpinion, setWantToAddOpinion] = useState(false);
@@ -20,41 +21,34 @@ const OpinionForm = () => {
     }
   };
 
-  return (
-    <div>
-      <h2>Do you want to add your own opinion?</h2>
-      <label>
-        <input
-          type="radio"
-          value="yes"
-          checked={wantToAddOpinion}
-          onChange={() => setWantToAddOpinion(true)}
-        />
-        Yes
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="no"
-          checked={!wantToAddOpinion}
-          onChange={() => setWantToAddOpinion(false)}
-        />
-        No
-      </label>
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
 
-      {wantToAddOpinion && (
-        <div>
-          <h3>Write your opinion:</h3>
-          <textarea
-            value={opinion}
-            onChange={(e) => setOpinion(e.target.value)}
-            rows="4"
-            cols="50"
-          />
+  return (
+    <div className="center-box" >
+      <div>
+        <h3>Write your opinion:</h3>
+        <textarea
+          value={opinion}
+          onChange={(e) => setOpinion(e.target.value)}
+          rows="4"
+          cols="50"
+        />
+      </div>
+
+      <button
+        className={`submit-btn ${isButtonClicked ? "clicked" : ""}`}
+        onClick={handleSubmit}
+      >
+        <h6 style={{ margin: "0", color: "#fff" }}>
+          {isButtonClicked ? "Answers Submitted" : "Submit Answers"}
+        </h6>
+      </button>
+
+      {isButtonClicked && (
+        <div style={{ marginTop: "10px", color: "#00bf63" }}>
+          Answers submitted successfully!
         </div>
       )}
-
-      <button onClick={handleSubmit}>Submit</button>
     </div>
   );
 };

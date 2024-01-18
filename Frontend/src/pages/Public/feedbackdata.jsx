@@ -6,12 +6,12 @@ export const QuizData = [
     },
     {
       question:
-        "In your opinion, how trustworthy are the policies and actions of the Indian police?",
+        "How would you rate the transparency of the police in explaining the reasons for case closure?",
       options: [
-        "Very Trustworthy",
-        "Trustworthy",
-        " Somewhat Trustworthy",
-        "Not Trustworthy",
+        "Very Transparent",
+        "Transparent",
+        "Neutral",
+        "Not Transparent",
       ],
     },
     {
@@ -31,12 +31,12 @@ export const QuizData = [
     },
     {
       question:
-        "How prevalent do you think discrimination based on caste, religion, and gender is within the Indian police force?",
+        "How satisfied are you with the communication from the police during the investigation?",
       options: [
-        "Highly Disciplined",
-        "Disciplined",
-        "Moderately Disciplined",
-        "Undisciplined",
+        "Very Satisfied",
+        "Satisfied",
+        "Neutral",
+        "Unsatisfied",
       ],
     },
   
